@@ -19,8 +19,8 @@
 
     " Color Theme
     " Use :Colors for a list of available colorschemes
-       let g:evervim_color_theme="Monokai"
-       let g:evervim_airline_theme="Monokai"
+       let g:evervim_color_theme="Dracula"
+       Monokai"let g:evervim_airline_theme="Monokai"
        let g:evervim_light_background = 1
 
     " Customize Patched Font

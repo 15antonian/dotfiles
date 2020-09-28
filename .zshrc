@@ -9,7 +9,7 @@ fi
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/antonio/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -104,7 +104,7 @@ source $ZSH/oh-my-zsh.sh
  alias ohmyzsh="vim ~/.zshrc"
  alias reptilian='sudo sshpass -p reptilian ssh reptilian@192.168.126.128'
  alias appdata='cd /mnt/c/Users/iisni/AppData/Roaming'
- alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' 
+ alias cf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' 
 # #Change ls colour
  LS_COLORS="ow=01;36;40" && export LS_COLORS
 # #make cd use the ls colours
