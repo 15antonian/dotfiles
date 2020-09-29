@@ -68,11 +68,21 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+# Set fzf installation directory path
+export FZF_BASE='$HOME/.fzf/bin/fzf'
+
+# Uncomment to set the FZF_DEFAULT_COMMAND
+export FZF_DEFAULT_COMMAND='find -type f'
+
+# Uncomment the following line to disable fuzzy completion
+# DISABLE_FZF_AUTO_COMPLETION="true"
+
+# Uncomment the following line to disable key bindings (CTRL-T, CTRL-R, ALT-C)
+DISABLE_FZF_KEY_BINDINGS="false"
 
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-plugins=(git dotenv zsh-syntax-highlighting zsh-autosuggestions zsh-completions)
+plugins=(git dotenv zsh-syntax-highlighting zsh-autosuggestions zsh-completions fzf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -98,14 +108,7 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
- alias zshconfig="vim ~/.zshrc"
- alias sourcezsh="source ~/.zshrc"
- alias ohmyzsh="vim ~/.zshrc"
- alias reptilian='sudo sshpass -p reptilian ssh reptilian@192.168.126.128'
- alias appdata='cd /mnt/c/Users/iisni/AppData/Roaming'
- alias cf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' 
-# #Change ls colour
+ #Change ls colour
  LS_COLORS="ow=01;36;40" && export LS_COLORS
 # #make cd use the ls colours
  zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
@@ -115,3 +118,13 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 . /usr/share/autojump/autojump.sh
+# Custom aliases
+ alias zshconfig="vim ~/.zshrc"
+ alias sourcezsh="source ~/.zshrc"
+ alias ohmyzsh="vim ~/.zshrc"
+ alias reptilian='sudo sshpass -p reptilian ssh reptilian@192.168.126.128'
+ alias appdata='cd /mnt/c/Users/iisni/AppData/Roaming'
+ alias cf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' 
+ alias kernel='cd /usr/rep/src/reptilian-kernel'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
