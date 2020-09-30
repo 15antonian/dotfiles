@@ -122,9 +122,12 @@ source $ZSH/oh-my-zsh.sh
  alias zshconfig="vim ~/.zshrc"
  alias sourcezsh="source ~/.zshrc"
  alias ohmyzsh="vim ~/.zshrc"
- alias reptilian='sudo sshpass -p reptilian ssh reptilian@192.168.126.128'
+ alias reptilian='sshpass -p reptilian ssh reptilian@192.168.126.128'
  alias appdata='cd /mnt/c/Users/iisni/AppData/Roaming'
  alias cf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' 
  alias kernel='cd /usr/rep/src/reptilian-kernel'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+alias at='alacritty-themes'
+alias alacritty="vim /mnt/c/Users/iisni/AppData/Roaming/alacritty/alacritty.yml"
+alias reload="source ~/.EverVim.vimrc && source ~/.zshrc && source /mnt/c/Users/iisni/AppData/Roaming/alacritty/alacritty.yml"

@@ -1,11 +1,3 @@
-" Modeline and Notes {
-"   EverVim is a modern & powerful vim distribution
-"   Repo URL: https://github.com/LER0ever/EverVim
-"   Made by [LER0ever](https://github.com/LER0ever)
-"   Licensed under
-"       * Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE.md) or http://www.apache.org/licenses/LICENSE-2.0)
-" }
-
 " EverVim options {
 
     " Disable folding
@@ -19,9 +11,9 @@
 
     " Color Theme
     " Use :Colors for a list of available colorschemes
-       let g:evervim_color_theme="Dracula"
-       "let g:evervim_airline_theme="Monokai"
-       let g:evervim_light_background = 1
+       let g:evervim_color_theme="Monokai"
+       let g:evervim_airline_theme="wombat"
+       let g:evervim_light_background = 0
 
     " Customize Patched Font
     " Pick one at https://github.com/ryanoasis/nerd-fonts
@@ -82,10 +74,10 @@
     " Enable smooth scrolling
     " Use physics-based smooth scrolling for half-page/full-page scrolling
     " Friction and air-drag can be override here
-    "   let g:evervim_smooth_scrolling = 1
+    let g:evervim_smooth_scrolling = 1
 
     " Enable transparent background on terminal vim/nvim
-let g:evervim_transparent_bg = 1
+    let g:evervim_transparent_bg = 0
 
     " Disable easier moving in tabs and windows
     " only if you need <C-J> for jumping or other conflicting plugin
@@ -143,7 +135,7 @@ let g:evervim_transparent_bg = 1
     " Hybrid Linenumber
     " Show absolute line number for current line and relative
     " for the rest
-    "   let g:evervim_hybrid_linenumber = 1
+    let g:evervim_hybrid_linenumber = 1
 
     " 80 Column Warning
     " Shows a magenta line at column 81 only for those lines that exceeds 80
