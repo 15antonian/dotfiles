@@ -154,9 +154,8 @@
     "   let g:multi_cursor_quit_key='<Esc>'
     " Require a special keypress to enter multiple cursors mode
     "   let g:multi_cursor_start_key='+'
-
+    set tags=tags
     " Mappings for editing/applying evervim config
     "   let g:evervim_edit_config_mapping='<leader>ec'
     "   let g:evervim_apply_config_mapping='<leader>ac'
-" }
-
+    " }
