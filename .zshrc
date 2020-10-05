@@ -116,7 +116,7 @@ DISABLE_FZF_KEY_BINDINGS="false"
 
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-plugins=(git dotenv zsh-syntax-highlighting zsh-autosuggestions zsh-completions fzf)
+plugins=(git dotenv vi-mode zsh-syntax-highlighting zsh-autosuggestions zsh-completions fzf)
 
 source $ZSH/oh-my-zsh.sh
 
