@@ -35,7 +35,7 @@ bindkey '^e' edit-command-line
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 # If you come from bash you might have to change your $PATH.
@@ -45,16 +45,11 @@ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/ga
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+#ZSH_THEME="powerlevel10k/powerlevel10k"
+ ZSH_THEME= "agnoster"
 
-# Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
@@ -116,7 +111,7 @@ DISABLE_FZF_KEY_BINDINGS="false"
 
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-plugins=(git dotenv vi-mode zsh-syntax-highlighting zsh-autosuggestions zsh-completions fzf)
+plugins=(git dotenv zsh-syntax-highlighting zsh-autosuggestions zsh-completions fzf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -128,27 +123,28 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
- if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
- else
-   export EDITOR='mvim'
- fi
+if [[ -n $SSH_CONNECTION ]]; then
+    export EDITOR='vim'
+else
+    export EDITOR='mvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 # Custom aliases
- alias zshconfig="vim ~/.zshrc"
- alias sourcezsh="source ~/.zshrc"
- alias ohmyzsh="vim ~/.zshrc"
- alias reptilian='sshpass -p reptilian ssh reptilian@192.168.126.128'
- alias appdata='cd /mnt/c/Users/iisni/AppData/Roaming'
- alias cf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' 
- alias kernel='cd /usr/rep/src/reptilian-kernel'
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+alias zshconfig="vim ~/.zshrc"
+alias sourcezsh="source ~/.zshrc"
+alias ohmyzsh="vim ~/.zshrc"
+alias reptilian='sshpass -p reptilian ssh reptilian@192.168.126.128'
+alias appdata='cd /mnt/c/Users/iisni/AppData/Roaming'
+alias cf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' 
+alias kernel='cd /usr/rep/src/reptilian-kernel'
 alias at='alacritty-themes'
 alias alacritty="vim /mnt/c/Users/iisni/AppData/Roaming/alacritty/alacritty.yml"
 alias reload="source ~/.EverVim.vimrc && source ~/.zshrc && source /mnt/c/Users/iisni/AppData/Roaming/alacritty/alacritty.yml"
+alias onedrive="cd /mnt/c/Users/iisni/Onedrive"
+
