@@ -70,8 +70,8 @@ bindkey '^e' edit-command-line
 
 ENABLE_CORRECTION="true"
 
-export EDITOR="vim"
- 
+export EDITOR="nvim"
+alias vim="nvim" 
 
 #Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -94,11 +94,11 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-    export EDITOR='vim'
-else
-    export EDITOR='mvim'
-fi
+#if [[ -n $SSH_CONNECTION ]]; then
+    #export EDITOR='vim'
+#else
+    #export EDITOR='mvim'
+#fi
 
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
 
@@ -119,3 +119,4 @@ alias reload="source ~/.EverVim.vimrc && source ~/.zshrc && source /mnt/c/Users/
 alias onedrive="cd /mnt/c/Users/iisni/Onedrive"
 alias wt="vim /mnt/c/Users/iisni/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
 alias vimrc="vim ~/.EverVim.vimrc"
+alias man="viman"

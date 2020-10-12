@@ -1,2 +1,3 @@
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'scrooloose/nerdcommenter'
+Plug 'vim-utils/vim-man'
+
