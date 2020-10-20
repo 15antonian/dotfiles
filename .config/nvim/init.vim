@@ -3,9 +3,12 @@ set termguicolors
 set background=dark
 "colorscheme dracula
 let g:gruvbox_material_background = 'soft'
+set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='violet'
 let g:airline_powerline_fonts = 1
+let g:airline_section_b = '%{strftime("%c")}'
+let g:airline_section_y = 'BN: %{bufnr("%")}'
 let g:rainbow_active = 1
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -15,7 +18,8 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 "----------------------Plugins----------------------
-call plug#begin('~/.local/share/nvim/plugged')
+call plug#begin('~/.config/nvim/plugged')
+Plug 'vim-jp/vim-cpp'
 Plug 'vim-utils/vim-man'
 Plug 'tpope/vim-sensible'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -32,7 +36,7 @@ Plug 'neoclide/jsonc.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
+Plug 'tpope/vim-fugitive'
 "--------Status Bar theming--------------------------
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -44,7 +48,7 @@ Plug 'colepeters/spacemacs-theme.vim'
 Plug 'sainnhe/gruvbox-material'
 Plug 'phanviet/vim-monokai-pro'
 Plug 'chriskempson/base16-vim'
-Plug 'lokaltog/vim-powerline'
+"Plug 'lokaltog/vim-powerline'
 Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 "let g:evervim_clear_search_highlight = 0
@@ -71,13 +75,22 @@ set autoread
 set hidden
 set smartindent
 set lazyredraw
-set laststatus=2
 set modeline
+
+
+let g:python3_host_prog = "/bin/python3.8"
 " Give more space for displaying messages.
 set cmdheight=2
 set updatetime=50
+
 set undofile                 "turn on the feature
 set undodir=$HOME/.vim/undo  "directory where the undo files will be stored
+
+"Tabbing
+set tabstop=2
+set shiftwidth=2
+set smarttab
+set expandtab
 
  "Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
@@ -135,7 +148,7 @@ let g:coc_global_extensions = [
 noremap x "_x
 noremap X "_x
 
-noremap S :%s//g<Left><Left>
+"noremap S :%s//g<Left><Left>
 noremap <silent> <C-S>  :update<CR>
 vnoremap <silent> <C-S>    <C-C>:update<CR>
 noremap <silent> <C-S>  <C-O>:update<CR>
