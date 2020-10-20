@@ -159,3 +159,14 @@ alias wt="nvim /mnt/c/Users/iisni/AppData/Local/Packages/Microsoft.WindowsTermin
 alias vimrc="nvim ~/.config/nvim/init.vim"
 alias man="viman"
 alias vim="nvim"
+
+
+#Changing ls to exa
+alias ls='exa -l --color=always --group-directories-first' # my preferred listing
+alias la='exa -al --color=always --group-directories-first'  # all files and dirs
+alias ll='exa -al --color=always --group-directories-first'  # long format
+alias lt='exa -aT --color=always --group-directories-first' # tree listing
+
+
+#the terminal rickroll
+alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'

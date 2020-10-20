@@ -32,6 +32,7 @@ Plug 'scrooloose/syntastic'
 Plug 'mhinz/vim-startify'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'neoclide/jsonc.vim'
+Plug 'yuttie/comfortable-motion.vim'
 "--------Auto completion/syntax highlighting--------------
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-surround'
@@ -40,7 +41,11 @@ Plug 'tpope/vim-fugitive'
 "--------Status Bar theming--------------------------
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
+"--------CPP-------------------------------
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'vim-scripts/c.vim'
+Plug 'vim-scripts/a.vim'
+Plug 'peterhoeg/vim-qml'
 "--------Themes-------------------------------
 Plug 'flazz/vim-colorschemes'
 Plug 'morhetz/gruvbox'
@@ -92,10 +97,10 @@ set shiftwidth=2
 set smarttab
 set expandtab
 
- "Don't pass messages to |ins-completion-menu|.
+"Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 
- "Enable autocompletion:
+"Enable autocompletion:
 set wildmode=longest,list,full
 
 autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
@@ -115,18 +120,18 @@ let g:go_highlight_format_strings = 1
 let g:go_highlight_variable_declarations = 1
 let g:go_auto_sameids = 1
 
- "Disables automatic commenting on newline:
+"Disables automatic commenting on newline:
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
- "Spell-check set to <leader>o, 'o' for 'orthography':
+"Spell-check set to <leader>o, 'o' for 'orthography':
 map <leader>o :setlocal spell! spelllang=en_us<CR>
 map <leader>n :NERDTreeToggle<CR>f
 
- "Save file as sudo on files that require root permission
+"Save file as sudo on files that require root permission
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
 map <C-z> <plug>NERDCommenterToggle
- "Shortcutting split navigation, saving a keypress:
+"Shortcutting split navigation, saving a keypress:
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
@@ -144,7 +149,7 @@ let g:coc_global_extensions = [
   \ 'coc-clangd',
   \ 'coc-sh'
   \ ]
- "Prevent x from overriding what's in the clipboard.
+"Prevent x from overriding what's in the clipboard.
 noremap x "_x
 noremap X "_x
 
@@ -154,6 +159,6 @@ vnoremap <silent> <C-S>    <C-C>:update<CR>
 noremap <silent> <C-S>  <C-O>:update<CR>
 nmap <C-n> :NERDTreeToggle<CR>
 
- "Automatically deletes all trailing whitespace and newlines at end of file on save.
+"Automatically deletes all trailing whitespace and newlines at end of file on save.
 autocmd BufWritePre * %s/\s\+$//e
 autocmd BufWritepre * %s/\n\+\%$//e
