@@ -1,2 +1,3 @@
+python.setInterpreter
 clangd.install
 prettier.formatFile

@@ -1,0 +1,15 @@
+public abstract class Decorator extends FoodComponent{
+    protected FoodComponent foodItem;
+
+    public Decorator(FoodComponent newItem){
+        foodItem = newItem;
+    }
+    public void removeTopping(Topping newFoodComponent) {
+        throw new UnsupportedOperationException();
+    }
+
+    public void addTopping(Topping newFoodComponent) {
+        throw new UnsupportedOperationException();
+    }
+
+}

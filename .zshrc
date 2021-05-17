@@ -4,9 +4,13 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# If you come from bash you might have to change your $PATH.
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+if [[ $(pwd) == /mnt/c/Windows/System32  ]]
+then
+    cd ~
+fi
 
+# If you come from bash you might have to change your $PATH.
+export PATH=$Path:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/antonio/.local/bin
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -69,7 +73,7 @@ bindkey -v '^?' backward-delete-char
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
-ENABLE_CORRECTION="true"
+#ENABLE_CORRECTION="true"
 
 export EDITOR="nvim"
 alias vim="nvim"
@@ -80,7 +84,6 @@ COMPLETION_WAITING_DOTS="true"
 export FZF_BASE='$HOME/.fzf/bin/fzf'
 
 export FZF_DEFAULT_COMMAND='find -type f'
-
 
 DISABLE_FZF_KEY_BINDINGS="false"
 
@@ -157,7 +160,7 @@ alias reload="source ~/.EverVim.vimrc && source ~/.zshrc && source /mnt/c/Users/
 alias onedrive="cd /mnt/c/Users/iisni/Onedrive"
 alias wt="nvim /mnt/c/Users/iisni/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
 alias vimrc="nvim ~/.config/nvim/init.vim"
-alias man="viman"
+#alias man="viman"
 alias vim="nvim"
 
 

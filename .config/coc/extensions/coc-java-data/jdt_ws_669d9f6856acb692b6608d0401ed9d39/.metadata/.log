@@ -1,0 +1,39 @@
+!SESSION 2021-03-29 18:40:32.154 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.10
+java.vendor=Ubuntu
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /home/antonio/.config/coc/extensions/coc-java-data/jdt_ws_669d9f6856acb692b6608d0401ed9d39
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-03-29 18:40:35.571
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-03-29 18:40:36.215
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-03-29 18:40:36.279
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-03-29 18:40:36.310
+!MESSAGE Initializing Java Language Server 0.71.0.202103191124
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-03-29 18:40:36.377
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-03-29 18:40:36.378
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.refreshDiagnostics, java.project.import, java.navigate.openTypeHierarchy, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.provideSemanticTokens, java.project.resolveStackTraceLocation, java.project.getAll, java.project.isTestFile, java.project.getClasspaths, java.navigate.resolveTypeHierarchy, java.project.getSemanticTokensLegend, java.project.getSettings, java.project.updateSourceAttachment, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-03-29 18:40:36.418
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-03-29 18:40:36.513
+!MESSAGE Creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-03-29 18:40:36.778
+!MESSAGE Finished creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-03-29 18:40:39.003
+!MESSAGE Importing Gradle project(s)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-03-29 18:40:39.005
+!MESSAGE No previous Gradle project at /mnt/c/Users/iisni/Desktop, it must be synchronized
