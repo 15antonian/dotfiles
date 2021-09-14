@@ -14,15 +14,16 @@ export PATH=$Path:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-source ~/antigen.zsh
+source /usr/local/share/antigen/antigen.zsh
+#source ~/antigen.zsh
 
 antigen use oh-my-zsh
 #Theme
-#antigen theme romkatv/powerlevel10k
+antigen theme romkatv/powerlevel10k
 #antigen theme lambda
 #antigen theme amuse
 #antigen theme denysdovhan/spaceship-prompt
-antigen theme sindresorhus/pure
+# antigen theme sindresorhus/pure
 #bundles
 antigen bundle git
 antigen bundle unixorn/autoupdate-antigen.zshplugin
@@ -154,8 +155,8 @@ alias reptilian='sshpass -p reptilian ssh reptilian@192.168.126.128'
 alias appdata='cd /mnt/c/Users/iisni/AppData/Roaming'
 alias cf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias kernel='cd /usr/rep/src/reptilian-kernel'
-alias at='alacritty-themes'
-alias alacritty="nvim /mnt/c/Users/iisni/AppData/Roaming/alacritty/alacritty.yml"
+#alias at='alacritty-themes'
+#alias alacritty="nvim /mnt/c/Users/iisni/AppData/Roaming/alacritty/alacritty.yml"
 alias reload="source ~/.EverVim.vimrc && source ~/.zshrc && source /mnt/c/Users/iisni/AppData/Roaming/alacritty/alacritty.yml"
 alias onedrive="cd /mnt/c/Users/iisni/Onedrive"
 alias wt="nvim /mnt/c/Users/iisni/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
@@ -173,3 +174,26 @@ alias lt='exa -aT --color=always --group-directories-first' # tree listing
 
 #the terminal rickroll
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+
+# NVM zsh initialize BEGIN - do not modify #
+export NVM_HOME="${HOME}/nvm"
+NVM_SH="${NVM_HOME}/bin/nvm.sh"
+if [ -s "${NVM_SH}" ]; then
+  export NVM_LINK="${HOME}/nvm/nodejs/bin"
+  export NVM_NODEJS_ORG_MIRROR="https://repository.walmart.com/content/repositories/nodejs/"
+  source "${NVM_SH}"
+else
+  unset NVM_HOME
+  NVM_ERROR="${NVM_SH} is not valid"
+fi
+unset NVM_SH
+# NVM zsh initialize END - do not modify #
+
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:/usr/local/opt/libressl/bin
+
+alias chromedev="open -na Google\ Chrome --args --disable-web-security --user-data-dir=/tmp/temporary-chrome-profile-dir"
