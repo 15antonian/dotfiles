@@ -4,27 +4,22 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-if [[ $(pwd) == /mnt/c/Windows/System32  ]]
-then
-    cd ~
-fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$Path:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/antonio/.local/bin
+export PATH=$Path:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/antonio/.local/bin:/opt/homebrew/bin:/Users/antonioantonian/Library/Python/3.8/bin
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-source /usr/local/share/antigen/antigen.zsh
-#source ~/antigen.zsh
+#source /usr/local/share/antigen/antigen.zsh
+source ~/antigen.zsh
 
 antigen use oh-my-zsh
-#Theme
+
 antigen theme romkatv/powerlevel10k
 #antigen theme lambda
 #antigen theme amuse
 #antigen theme denysdovhan/spaceship-prompt
 # antigen theme sindresorhus/pure
-#bundles
 antigen bundle git
 antigen bundle unixorn/autoupdate-antigen.zshplugin
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -88,22 +83,12 @@ export FZF_DEFAULT_COMMAND='find -type f'
 
 DISABLE_FZF_KEY_BINDINGS="false"
 
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-#plugins=(git dotenv zsh-syntax-highlighting zsh-autosuggestions zsh-completions fzf)
-
-source $ZSH/oh-my-zsh.sh
+#source $ZSH/oh-my-zsh.sh
 
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-#if [[ -n $SSH_CONNECTION ]]; then
-    #export EDITOR='vim'
-#else
-    #export EDITOR='mvim'
-#fi
 
 SPACESHIP_PROMPT_ORDER=(
   time        # Time stamps section (Disabled)
@@ -151,49 +136,13 @@ export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
 alias zshconfig="nvim ~/.zshrc"
 alias sourcezsh="source ~/.zshrc"
 alias ohmyzsh="nvim ~/.zshrc"
-alias reptilian='sshpass -p reptilian ssh reptilian@192.168.126.128'
-alias appdata='cd /mnt/c/Users/iisni/AppData/Roaming'
-alias cf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias kernel='cd /usr/rep/src/reptilian-kernel'
-#alias at='alacritty-themes'
-#alias alacritty="nvim /mnt/c/Users/iisni/AppData/Roaming/alacritty/alacritty.yml"
-alias reload="source ~/.EverVim.vimrc && source ~/.zshrc && source /mnt/c/Users/iisni/AppData/Roaming/alacritty/alacritty.yml"
-alias onedrive="cd /mnt/c/Users/iisni/Onedrive"
-alias wt="nvim /mnt/c/Users/iisni/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
-alias vimrc="nvim ~/.config/nvim/init.vim"
-#alias man="viman"
-alias vim="nvim"
 
+alias cf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias vimrc="nvim ~/.config/nvim/init.vim"
+alias vim="nvim"
 
 #Changing ls to exa
 alias ls='exa -l --color=always --group-directories-first' # my preferred listing
 alias la='exa -al --color=always --group-directories-first'  # all files and dirs
 alias ll='exa -al --color=always --group-directories-first'  # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
-
-
-#the terminal rickroll
-alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
-
-# NVM zsh initialize BEGIN - do not modify #
-export NVM_HOME="${HOME}/nvm"
-NVM_SH="${NVM_HOME}/bin/nvm.sh"
-if [ -s "${NVM_SH}" ]; then
-  export NVM_LINK="${HOME}/nvm/nodejs/bin"
-  export NVM_NODEJS_ORG_MIRROR="https://repository.walmart.com/content/repositories/nodejs/"
-  source "${NVM_SH}"
-else
-  unset NVM_HOME
-  NVM_ERROR="${NVM_SH} is not valid"
-fi
-unset NVM_SH
-# NVM zsh initialize END - do not modify #
-
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:/usr/local/opt/libressl/bin
-
-alias chromedev="open -na Google\ Chrome --args --disable-web-security --user-data-dir=/tmp/temporary-chrome-profile-dir"
